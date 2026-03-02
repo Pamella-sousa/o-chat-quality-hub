@@ -27,6 +27,9 @@ A inteligência do processo de QA está concentrada na pasta [**`shift-left-stra
 
 O hub organiza a pirâmide de testes para oferecer visibilidade total sobre a saúde do ecossistema:
 
+### 0. `shift-left-strategy/` 🧠
+* Base da Engenharia de Qualidade com foco em análise de requisitos, matriz de riscos e contratos de API.
+
 ### 1. `web-automation-cypress/` 🌐
 * Automação End-to-End (E2E) da jornada do atendente e gestão de leads.
 * Utilização de seletores de alta confiabilidade e gerenciamento de estados com Hooks para evitar *flakiness*.
