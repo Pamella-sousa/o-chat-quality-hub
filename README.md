@@ -1,46 +1,50 @@
-# 🤖 O.Chat Quality & Engineering Hub
+🤖 O.Chat Quality & Engineering Hub
+Este repositório é a central estratégica de Quality Engineering para as soluções de Chat-Commerce e atendimento Omnichannel da O.chat. Aqui, a qualidade não é tratada como uma etapa final de conferência, mas como um pilar fundamental presente desde o refinamento de requisitos até a entrega segura em produção.
 
-Este repositório é a central estratégica de **Quality Engineering** para as soluções de Chat-Commerce e atendimento Omnichannel. Aqui, a qualidade não é uma etapa final, mas um pilar presente desde o refinamento até a entrega segura em produção.
+🎯 Pilares de Engenharia de Qualidade
+Shift-Left Testing: Antecipação de cenários de teste e análise de riscos ainda na fase de design para reduzir drasticamente o custo de correção de bugs.
 
-## 🎯 Pilares de Engenharia de Qualidade
+Independência de Dados: Implementação de massas dinâmicas (e-mails e IDs únicos) para garantir testes atômicos, resilientes e evitar falsos-negativos.
 
-* **Independência de Dados**: Implementação de massas dinâmicas (e-mails e IDs únicos) para garantir testes atômicos e resilientes, eliminando falsos-negativos por duplicidade.
-* **Cultura de DoD (Definition of Done)**: Critérios rigorosos que garantem que nenhuma funcionalidade seja considerada "concluída" sem a devida cobertura de automação e validação de riscos.
-* **Testes de Exceção (Negative Testing)**: Foco em resiliência, garantindo que o sistema barre dados corrompidos ou incompletos conforme as regras de negócio.
-* **Shift-Left Testing**: Antecipação de cenários de teste ainda na fase de design e requisitos para reduzir o custo de correção de bugs.
+Cultura de DoD (Definition of Done): Critérios rigorosos que garantem que nenhuma funcionalidade seja considerada "concluída" sem automação e validação de riscos.
 
----
+Testes de Exceção (Negative Testing): Foco em resiliência, garantindo que o sistema trate corretamente dados corrompidos ou fluxos inesperados de IA.
 
-## 📂 Estrutura do Ecossistema (Monorepo)
+🧠 Estratégia Shift-Left (Prevenção)
+A inteligência do processo de QA está concentrada na pasta shift-left-strategy/. Nela, documento como a qualidade atua antes da primeira linha de código ser escrita:
 
-O hub está organizado para oferecer visibilidade total sobre os diferentes níveis da pirâmide de testes:
+Análise de Requisitos: Prevenção de falhas no fluxo de Escalonamento Inteligente (IA ➔ Humano).
 
-1. **`web-automation-cypress/`** 🌐
-   - Automação End-to-End (E2E) da jornada do atendente e gestão de leads.
-   - Uso de seletores de alta confiabilidade (IDs) e gerenciamento de estados com Hooks.
+Gestão de Riscos: Matriz de mitigação para fluxos críticos de Checkout e integrações com APIs da Meta.
 
-2. **`api-testing-postman/`** ⚡
-   - Validação de contratos e integração de Webhooks (WhatsApp/Instagram).
-   - Coleções estruturadas para testes de integração e performance de API.
+Planejamento de APIs: Definição antecipada de contratos para garantir a integridade entre microsserviços.
 
-3. **`docs/`** 📄
-   - Documentação de processos ágeis, estratégias de QA e o arquivo oficial de **Definition of Done (DoD)**.
+📂 Estrutura do Monorepo
+O hub organiza a pirâmide de testes para oferecer visibilidade total sobre a saúde do ecossistema:
 
----
+1. web-automation-cypress/ 🌐
+Automação End-to-End (E2E) da jornada do atendente e gestão de leads.
 
-## 🛠️ Stack Tecnológica
+Utilização de seletores de alta confiabilidade e gerenciamento de estados com Hooks para evitar flakiness.
 
-* **Framework Web:** Cypress 13+
-* **API Testing:** Postman & Newman
-* **Linguagem:** JavaScript (Node.js)
-* **Metodologia:** Ágil com foco em Shift-Left e Automação Contínua
+2. api-testing-postman/ ⚡
+Validação de contratos e integração de Webhooks (WhatsApp/Instagram).
 
----
+Testes de esquema JSON para garantir que a troca de dados entre a IA e o Core seja rigorosa.
 
-## 🚀 Como Executar os Projetos
+3. docs/ 📄
+Documentação de processos ágeis e o arquivo oficial de Definition of Done (DoD).
 
-Cada subdiretório contém seu próprio guia técnico detalhado. Para iniciar pela automação de interface, acesse o guia específico:
-👉 [README - Automação Cypress](./web-automation-cypress/README.md)
+🛠️ Stack Tecnológica
+Framework Web: Cypress 13+
 
----
-**Pamella – Quality Engineer | Focada em automação resiliente e processos de alta performance.**
+API Testing: Postman & Newman
+
+Linguagem: JavaScript (Node.js)
+
+Metodologia: Ágil com foco em Shift-Left e Automação Contínua
+
+Pamella – Quality Engineer | Focada em automação resiliente, prevenção de defeitos e processos de alta performance.
+
+Qual o próximo passo?
+Como você já tem o código do Cypress e a estratégia prontos, você gostaria que eu montasse um script de "Contract Test" no Postman para validar aquele JSON de escalonamento que aparece no seu planejamento? Isso provaria que sua estratégia de API está sendo executada na prática.
